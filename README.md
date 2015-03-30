@@ -1,13 +1,13 @@
 # googlemock
 
-This is my personal fork of googlemock. The official source can be found at the
-[googlemock website](https://code.google.com/p/googlemock/). Nothing has been
-changed compared to the official download other than this README.md file.
+This is my personal mirror of googlemock. The official source can be found at
+the [googlemock website](https://code.google.com/p/googlemock/). Nothing has
+been changed compared to the official download other than this README.md file.
 
-This fork is used to easily put googlemock in my own projects as a git subrepo,
-instead of manually copying the source everywhere. To do this cleanly, I set up
-an `External` directory in my projects, similar to the one outlined in the
-CMakeEnvironment example in the [Cross Platform Test Driven Development
+This mirror is used to easily put googlemock in my own projects as a git
+subrepo, instead of manually copying the source everywhere. To do this cleanly,
+I set up an `External` directory in my projects, similar to the one outlined in
+the CMakeEnvironment example in the [Cross Platform Test Driven Development
 Environment Using
 CMake](http://www.gamedev.net/page/resources/_/technical/general-programming/cross-platform-test-driven-development-environment-using-cmake-part-1-r2986)
 tutorial.
@@ -46,6 +46,7 @@ Within the `External` directory, the CMakeLists.txt files look like this:
     SET(GMOCK_INCLUDE_DIRS ${GOOGLEMOCK_ROOT}/fused-src PARENT_SCOPE)
 
 In the main CmakeLists.txt you'll need to add:
+
     ...
     INCLUDE(External/CMakeLiss.txt)
     ...
