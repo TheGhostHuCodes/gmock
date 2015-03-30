@@ -24,11 +24,11 @@ In my projects, the `External` folder has the following structure:
 
 Within the `External` directory, the CMakeLists.txt files look like this:
 
-`External/CmakeLists.txt`:
+`External/CMakeLists.txt`:
 
     ADD_SUBDIRECTORY(External/CMake/gmock)
 
-`External/CMake/gmock/CmakeLists.txt`: 
+`External/CMake/gmock/CMakeLists.txt`: 
 
     # Use a variable to point to the root of googlemock within the External
     # directory. This makes it easier to update to new releases as desired.
@@ -45,10 +45,10 @@ Within the `External` directory, the CMakeLists.txt files look like this:
 
     SET(GMOCK_INCLUDE_DIRS ${GOOGLEMOCK_ROOT}/fused-src PARENT_SCOPE)
 
-In the main CmakeLists.txt I add:
+In the main CMakeLists.txt I add:
 
     ...
-    INCLUDE(External/CMakeLiss.txt)
+    INCLUDE(External/CMakeLists.txt)
     ...
 
 In the CMakeLists.txt that is used to build the tests named MyTests, I add:
