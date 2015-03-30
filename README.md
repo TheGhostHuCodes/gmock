@@ -45,17 +45,17 @@ Within the `External` directory, the CMakeLists.txt files look like this:
 
     SET(GMOCK_INCLUDE_DIRS ${GOOGLEMOCK_ROOT}/fused-src PARENT_SCOPE)
 
-In the main CmakeLists.txt you'll need to add:
+In the main CmakeLists.txt I add:
 
     ...
     INCLUDE(External/CMakeLiss.txt)
     ...
 
-In the CMakeLists.txt that is used to build the tests, add:
+In the CMakeLists.txt that is used to build the tests named MyTests, I add:
     
     ...
-    TARGET_LINK_LIBRARIES(gmock)
+    TARGET_LINK_LIBRARIES(MyTests gmock)
     INCLUDE_DIRECTORIES(${GMOCK_INCLUDE_DIRS})
     ...
     
-Build your project and you're of to the races!
+Build the project and I'm off to the races!
